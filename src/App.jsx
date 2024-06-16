@@ -8,17 +8,12 @@ import GenresMovieList from './components/GenresMovieList'
 function App() {
 
   return (
-    <div className=''>
-
+    <>
       <Header />
-      
-      <Slider />
-      
+      <Slider /> 
       <ProductionHouse />
-
       <GenresMovieList />
-      
-    </div>
+    </>
   )
 }
 

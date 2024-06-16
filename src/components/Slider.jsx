@@ -3,7 +3,7 @@ import GlobalApi from '../Services/GlobalApi'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 
-const IMAGE_BASEA_URL = "https://image.tmdb.org/t/p/original";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
 const screenWidth=window.innerWidth;
 
 function Slider() {
@@ -22,11 +22,11 @@ function Slider() {
     }
 
     const sliderRight=(element)=> {
-        element.scrollLeft+=screenWidth-110
+        element.scrollLeft+=screenWidth-120
     }
 
     const sliderLeft=(element)=> {
-        element.scrollLeft-=screenWidth-110
+        element.scrollLeft-=screenWidth-120
     }
     return (
         <div>
@@ -34,10 +34,10 @@ function Slider() {
             <HiChevronRight className='text-white text-[30px] absolute mx-6 mt-[200px] bg-transparent cursor-pointer right-0' onClick={()=>sliderRight(elementRef.current)} />
 
 
-            <div className='flex overflow-x-auto w-full px-16 py-4 scrollbar-none scroll-smooth' ref={elementRef}>
+            <div className='flex overflow-x-auto w-full px-16 py-5 scrollbar-none scroll-smooth' ref={elementRef}>
                 {movieList.map((item, index) => (
-                    <img src={IMAGE_BASEA_URL + item.backdrop_path} alt="MoviesList img" 
-                    className='min-w-full md:h-[410px] object-top mr-5 rounded-md hover:border-[2px] border-gray-400 transition-all duration-100 ease-in center ' />
+                    <img src={IMAGE_BASE_URL + item.backdrop_path} alt="MoviesList img" 
+                    className='min-w-full md:h-[430px] object-top mr-5 rounded-md hover:border-[2px] border-gray-400 transition-all duration-100 ease-in center ' />
                 ))}
             </div>
         </div>
